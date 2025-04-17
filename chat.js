@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
     if (uploadedImage) {
-      fetch('http://localhost:5000/api/vision', {
+      fetch('https://backend-u593.onrender.com/api/vision', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ base64Image: uploadedImage, message })
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
           addMessage('⚠️ Vision processing failed.', 'bot');
         });
     } else {
-      fetch('http://localhost:5000/api/chat', {
+      fetch('https://backend-u593.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, language: selectedLang })
