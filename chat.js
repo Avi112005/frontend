@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
     if (uploadedImage) {
-      fetch('https://backend-u593.onrender.com/api/vision', {
+      fetch('https://yawning-arleta-avi112005-3ba679d0.koyeb.app/api/vision', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ base64Image: uploadedImage, message })
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
           addMessage('⚠️ Vision processing failed.', 'bot');
         });
     } else {
-      fetch('https://backend-u593.onrender.com/api/chat', {
+      fetch('https://yawning-arleta-avi112005-3ba679d0.koyeb.app/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, language: selectedLang })
